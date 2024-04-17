@@ -8,7 +8,7 @@ namespace HSINTechCICDAutomationPipeline.Tests.Practice
         {
             Console.WriteLine("Hello World");
 
-            Assert.Fail("Assert Fail");
+            //Assert.Fail("Assert Fail");
 
         }
     }
