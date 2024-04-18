@@ -6,7 +6,7 @@ namespace HSINTechCICDAutomationPipeline.Tests.Practice
         [TestMethod]
         public void TestMethod1()
         {
-            Console.WriteLine("Hello World");
+            //Console.WriteLine("Hello World");
 
             //Assert.Fail("Assert Fail");
 
