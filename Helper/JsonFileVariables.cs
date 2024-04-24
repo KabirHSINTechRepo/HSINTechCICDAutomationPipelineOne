@@ -12,5 +12,9 @@ namespace HSINTechCICDAutomationPipeline.Helper
         public string searchkeyword1 { get; set; }
         public string searchkeyword2 { get; set; }
 
+        public string clearProURL { get; set; }
+        public string clearProURLUserID { get; set; }
+        public string clearProURLPassword { get; set; }
+
     }
 }

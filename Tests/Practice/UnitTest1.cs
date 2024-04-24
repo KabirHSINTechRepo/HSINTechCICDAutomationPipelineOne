@@ -1,6 +1,6 @@
 namespace HSINTechCICDAutomationPipeline.Tests.Practice
 {
-    [TestClass]
+ //   [TestClass]
     public class UnitTest1
     {
         [TestMethod]

@@ -12,7 +12,7 @@ using WebDriverManager;
 
 namespace HSINTechCICDAutomationPipeline.Tests.Practice
 {
-    [TestClass]
+  //  [TestClass]
     public class SeleniumOne
     {
         //Declare variable

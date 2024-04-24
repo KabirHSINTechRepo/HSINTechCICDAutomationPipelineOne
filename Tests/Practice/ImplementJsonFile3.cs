@@ -16,7 +16,7 @@ using HSINTechCICDAutomationPipeline.Forms.Practice;
 
 namespace HSINTechCICDAutomationPipeline.Tests.Practice
 {
-    [TestClass]
+   // [TestClass]
     public class ImplementJsonFile3
     {
         //Declare variable

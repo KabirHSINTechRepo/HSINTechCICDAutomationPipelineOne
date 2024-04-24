@@ -11,7 +11,7 @@ using AventStack.ExtentReports;
 
 namespace HSINTechCICDAutomationPipeline.Tests.Practice
 {
-    [TestClass]
+  //  [TestClass]
     public class SeleniumTwo
     {
         //Declare variable

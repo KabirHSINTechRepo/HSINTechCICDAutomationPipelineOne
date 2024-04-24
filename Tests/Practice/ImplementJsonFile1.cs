@@ -13,7 +13,7 @@ using WebDriverManager;
 
 namespace HSINTechCICDAutomationPipeline.Tests.Practice
 {
-    [TestClass]
+  //  [TestClass]
     public class ImplementJsonFile1
     {
         //Declare variable

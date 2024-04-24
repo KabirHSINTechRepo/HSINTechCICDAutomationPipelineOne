@@ -1,4 +1,7 @@
 {
+  "clearProURL": "https://dnp-web.azurewebsites.net/sign-in",
+  "clearProURLPassword": "clearpro",
+  "clearProURLUserID": "aacosta",
   "googleURL": "https://www.google.com",
   "searchkeyword1": "Selenium ChromeDriver",
   "searchkeyword2": "Developer"
