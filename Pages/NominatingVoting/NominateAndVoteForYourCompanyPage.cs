@@ -12,6 +12,7 @@ namespace HSINTechCICDAutomationPipeline.Pages.NominatingVoting
         public string customercentricityaward = "//*[text()='Customer Centricity Award']";
         public string excellenceaward = "//*[text()='Excellence Award']";
         public string teamplayeraward = "//*[text()='Team Player Award']";
+        public string viewnomineesforteamplayeraward = "//*[@aria-label='View Nominees for Team Player Award']";
 
     }
 }

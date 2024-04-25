@@ -92,5 +92,16 @@ namespace HSINTechCICDAutomationPipeline.Forms.NominatingVoting
         }
 
 
+        public void ViewNomineesforTeamPlayerAward()
+        {
+            var nominateandvoteforyourcompanypage = new NominateAndVoteForYourCompanyPage();
+            basepage = new BasePage(driver);
+
+            //Click View Nominees for Team Player Award
+            basepage.ClickOnElement(nominateandvoteforyourcompanypage.viewnomineesforteamplayeraward);
+
+        }
+
+
     }
 }
