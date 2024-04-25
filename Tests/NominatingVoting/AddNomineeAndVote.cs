@@ -37,13 +37,13 @@ namespace HSINTechCICDAutomationPipeline.Tests.NominatingVoting
             //*****************************************************************************
 
             //========================== Headless Mode ==========================
-           // ChromeOptions options = new ChromeOptions();
-           // options.AddArgument("--headless=new");
-           // driver = new ChromeDriver(options);
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless=new");
+            driver = new ChromeDriver(options);
             //===================================================================
 
             //new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
-            driver = new ChromeDriver();
+            //driver = new ChromeDriver();
 
             GoogleSeachPage googleseachpage = new GoogleSeachPage();
             var awardpage = new AwardPage();
