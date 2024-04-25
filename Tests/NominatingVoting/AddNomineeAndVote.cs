@@ -37,13 +37,13 @@ namespace HSINTechCICDAutomationPipeline.Tests.NominatingVoting
             //*****************************************************************************
 
             //========================== Headless Mode ==========================
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--headless=new");
-            driver = new ChromeDriver(options);
+           // ChromeOptions options = new ChromeOptions();
+           // options.AddArgument("--headless=new");
+           // driver = new ChromeDriver(options);
             //===================================================================
 
             //new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
-            //driver = new ChromeDriver();
+            driver = new ChromeDriver();
 
             GoogleSeachPage googleseachpage = new GoogleSeachPage();
             var awardpage = new AwardPage();
@@ -52,6 +52,8 @@ namespace HSINTechCICDAutomationPipeline.Tests.NominatingVoting
             loginlogoutform = new LoginLogoutForm(driver);
             nominateandvoteforyourcompanyform = new NominateAndVoteForYourCompanyForm(driver);
             awardform = new AwardForm(driver);
+
+            string name = "Andrew Baker";
 
             basepage.LaunchURL(jsonfilevariables.clearProURL);
             Console.WriteLine("Open google home page");
@@ -70,7 +72,7 @@ namespace HSINTechCICDAutomationPipeline.Tests.NominatingVoting
             //View Nominees for Team Player Award
             nominateandvoteforyourcompanyform.ViewNomineesforTeamPlayerAward();
             awardform.AddnomineeVote();
-            awardform.CandidateSearchBox("Andrew Baker");
+            awardform.CandidateSearchBox(name);
 
             //As a Nominator, I want to submit a nomination by selecting a colleague and providing a brief description of their outstanding achievement.
 
@@ -83,13 +85,38 @@ namespace HSINTechCICDAutomationPipeline.Tests.NominatingVoting
                 javascript.performClick(awardpage.cancel, 2000);
             }
 
-            //Vote
+            //Click Vote
 
+            int RowCount = driver.FindElements(By.XPath("//*[@id='award-table']/tbody/tr")).Count;
+            Console.WriteLine("RowCount in Docket Tab: " + RowCount);
+
+            for (int i = 1; i <= RowCount; i++)
+            {
+                string nomineename = basepage.ReturnText("//*[@id='award-table']/tbody/tr[" + i + "]/td[1]/div");
+                if (nomineename.Contains(name))
+                {
+                    javascript.performClick("//*[@id='award-table']/tbody/tr[" + i + "]/td[3]/button", 2000);
+                    break;
+                }
+
+            }
+            // Click Vote - PopUp
+            awardform.VotePopup();
 
             //Logout
             loginlogoutform.LogoutClearPro();
 
         }
+
+
+        [TestCleanup]
+        public void TeardownTest()
+        {
+            driver.Quit();
+            Console.WriteLine("Close Browser");
+            Console.WriteLine("Quit Driver");
+        }
+
 
     }
 }

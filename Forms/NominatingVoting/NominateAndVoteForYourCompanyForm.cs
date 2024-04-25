@@ -97,6 +97,8 @@ namespace HSINTechCICDAutomationPipeline.Forms.NominatingVoting
             var nominateandvoteforyourcompanypage = new NominateAndVoteForYourCompanyPage();
             basepage = new BasePage(driver);
 
+            basepage.ExplicitWait(nominateandvoteforyourcompanypage.viewnomineesforteamplayeraward, 15);
+
             //Click View Nominees for Team Player Award
             basepage.ClickOnElement(nominateandvoteforyourcompanypage.viewnomineesforteamplayeraward);
 

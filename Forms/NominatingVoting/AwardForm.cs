@@ -27,7 +27,7 @@ namespace HSINTechCICDAutomationPipeline.Forms.NominatingVoting
         {
             var awardpage = new AwardPage();
             basepage = new BasePage(driver);
-
+            basepage.ExplicitWait(awardpage.addnomineevote, 15);
             basepage.ClickOnElement(awardpage.addnomineevote);
         }
         
@@ -35,7 +35,7 @@ namespace HSINTechCICDAutomationPipeline.Forms.NominatingVoting
         {
             var awardpage = new AwardPage();
             basepage = new BasePage(driver);
-
+            basepage.ExplicitWait(awardpage.candidatesearchbox, 15);
             basepage.EnterTextPressEnterUsingSendkeys(awardpage.candidatesearchbox, candidatename);
         }
 
@@ -54,6 +54,14 @@ namespace HSINTechCICDAutomationPipeline.Forms.NominatingVoting
             basepage = new BasePage(driver);
 
             javascript.performClick(awardpage.addnomineevotetonominateaaandidate,2000);
+        }
+
+        public void VotePopup()
+        {
+            var awardpage = new AwardPage();
+            basepage = new BasePage(driver);
+            basepage.ExplicitWait(awardpage.votepopup, 5);
+            javascript.performClick(awardpage.votepopup, 2000);
         }
 
 

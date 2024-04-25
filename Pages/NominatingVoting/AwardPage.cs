@@ -17,6 +17,7 @@ namespace HSINTechCICDAutomationPipeline.Pages.NominatingVoting
 
         public string candidateisrequiredErrorMessage = "//*[text()='Candidate is required']";
         public string cancel = "//*[@id='cancel']";
+        public string votepopup = "//*[@id='submit']";
 
     }
 }
